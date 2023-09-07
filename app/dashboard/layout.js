@@ -1,18 +1,17 @@
-import Header from "@/components/Header"
-import Sidebar from "@/components/Asidebar"
-
+import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata = {
-  title: 'Servicom',
-  description: 'Servicom Dashboard',
-}
+  title: "Dashboard",
+  description: "servicom dashboard",
+};
 
-export default function Layout({ children }) {
+export default function RootLayout({ children }) {
   return (
-    <main className=" h-screen">
-
-      <Header/>
-      <Sidebar/>
-      </main>
-  )
+    <div>
+      <Header />
+      <Sidebar />
+      {children}
+    </div>
+  );
 }
